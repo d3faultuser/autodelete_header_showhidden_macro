@@ -1,0 +1,28 @@
+Sub ShowEncrypted()
+'
+' ShowEncrypted
+'
+'
+On Error GoTo MainStop
+ If ActiveWindow.View.ShowAll = False Or ActiveWindow.View.ShowHiddenText = False Then
+ With ActiveWindow
+ With .View
+ .ShowHiddenText = True
+ End With
+ End With
+ Else
+ With ActiveWindow
+ With .View
+ .ShowHiddenText = False
+ End With
+ End With
+ End If
+MainStop:
+ If Err.Number <> 0 Then
+ MsgBox "The following contents has been encrypted..."
+ End If
+
+
+
+End Sub
+
