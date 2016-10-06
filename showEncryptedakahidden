@@ -19,7 +19,7 @@ On Error GoTo MainStop
  End If
 MainStop:
  If Err.Number <> 0 Then
- MsgBox "The following contents has been encrypted..."
+ MsgBox "The following contents is encrypted..."
  End If
 
 
